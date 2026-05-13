@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - e-Disha CSC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body style="background:#f8f9fa;">
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe"></i> e-Disha CSC
+            </a>
+            <div style="color:white; display:flex; align-items:center; gap:15px;">
+                <span>Welcome, <strong>Admin</strong></span>
+                <button onclick="logout()" style="background:none; border:none; color:white; cursor:pointer; font-size:1.2rem;">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="padding:40px 20px;">
+        <h2>Dashboard</h2>
+        <p>Welcome to your e-Disha CSC Portal</p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; margin-top:30px;">
+            <div style="background:white; padding:25px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                <h3>Today's Services</h3>
+                <h2 style="color:var(--primary);">12</h2>
+            </div>
+            <div style="background:white; padding:25px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                <h3>Pending Applications</h3>
+                <h2 style="color:orange;">05</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            if(confirm("Logout from Dashboard?")) {
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</body>
+</html>
