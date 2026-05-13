@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - e-Disha CSC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .login-container {
+            max-width: 420px;
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe"></i> e-Disha CSC
+            </a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2 style="text-align:center; color:var(--primary);">CSC Login</h2>
+        <p style="text-align:center; margin-bottom:25px;">Access your e-Disha Portal</p>
+        
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="CSC ID / Email / Mobile" required
+                   style="width:100%; padding:14px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+            
+            <input type="password" id="password" placeholder="Password" required
+                   style="width:100%; padding:14px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+            
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:14px; margin-top:15px;">Login</button>
+        </form>
+
+        <p style="text-align:center; margin-top:20px;">
+            <a href="#" style="color:var(--primary);">Forgot Password?</a>
+        </p>
+        
+        <hr style="margin:25px 0;">
+        <button onclick="alert('New CSC Registration Coming Soon!')" class="btn" style="width:100%; background:#f0f0f0; color:#333;">
+            New Registration
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("✅ Login Successful!\nRedirecting to Dashboard...");
+            window.location.href = "dashboard.html";
+        });
+    </script>
+</body>
+</html>
